@@ -21,6 +21,16 @@ public class BallotNum {
         this.proposerId = proposerId;
     }
 
+    public boolean greaterThen(BallotNum other){
+        if(this.round > other.round){
+            return true;
+        }
+        if(this.round < other.round){
+            return false;
+        }
+        return this.proposerId > other.proposerId;
+    }
+
     public Long getRound() {
         return round;
     }
